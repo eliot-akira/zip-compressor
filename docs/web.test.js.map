@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/web.test.ts"],
+  "sourcesContent": ["import type * as ZipStream from './'\n\ndeclare var window: {\n  ZipStream: typeof ZipStream\n}\n\nconsole.log('ZipStream', window.ZipStream)\n"],
+  "mappings": "mBAMA,QAAQ,IAAI,YAAa,OAAO,SAAS",
+  "names": []
+}
