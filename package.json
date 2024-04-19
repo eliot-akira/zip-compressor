@@ -27,15 +27,15 @@
     "readme.md"
   ],
   "scripts": {
-    "build:cjs": "node build cjs",
-    "build:esm": " node build esm",
-    "build:web": "node build web",
+    "build:cjs": "./bun-or node build.js cjs",
+    "build:esm": "./bun-or node build.js esm",
+    "build:web": "./bun-or node build.js web",
     "build:types": "tsc --project tsconfig.types.json --declaration --emitDeclarationOnly --outDir build/types",
     "build": "mkdir -p build && npm run clean && npm run format && npm run build:web && npm run build:cjs && npm run build:esm && npm run build:types && npm run docs",
-    "dev": "concurrently --raw 'node build dev' 'npm run dev:docs'",
+    "dev": "concurrently --raw './bun-or node build dev' './bun-or npm run dev:docs'",
     "dev:docs": "npm run docs -- --watch --preserveWatchOutput",
     "docs": "typedoc",
-    "test": "tsx test/index.ts",
+    "test": "./bun-or tsx test/index.ts",
     "clean": "rm -rf build/cjs/* && rm -rf build/esm/* && rm -rf build/web/*",
     "format": "prettier --no-config --no-semi --single-quote --write src",
     "release": "npm run build && npm publish --access public"

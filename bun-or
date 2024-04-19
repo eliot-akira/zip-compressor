@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+cmd="${1-}"
+
+if [ -z "$cmd" ]; then
+  echo "This script runs bun or the given fallback such as npm, npx, node, tsx"
+  echo "Usage: ./bun-or [command] [...options]"
+  echo "Example:"
+  echo "  ./bun-or tsx server.ts"
+  echo "  ./bun-or npm run docs"
+  exit
+fi
+
+shift
+if [ -x "$(command -v bun)" ]; then
+  if [ "$cmd" == "npx" ]; then
+    bunx "$@"
+  else
+    bun "$@"
+  fi
+elif [ "$cmd" == "tsx" ]; then
+  npx tsx "$@"
+else
+  $cmd "$@"
+fi
