@@ -1,11 +1,11 @@
 {
-  "name": "zip-stream",
+  "name": "zip-compressor",
   "version": "0.0.1",
   "type": "module",
   "description": "Encode and decode zip files with CompressionStream",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eliot-akira/zip-stream"
+    "url": "https://github.com/eliot-akira/zip-compressor"
   },
   "main": "build/cjs/index.js",
   "module": "build/esm/index.js",
