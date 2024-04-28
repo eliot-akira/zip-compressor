@@ -2,7 +2,7 @@
 
 Encode and decode zip files with [CompressionStream](https://developer.mozilla.org/en-US/docs/Web/API/Compression_Streams_API), well-supported natively in browsers and server-side JavaScript engines
 
-[Documentation - API](https://eliot-akira.github.io/zip-compressor/api)
+**[Documentation - API](https://eliot-akira.github.io/zip-compressor/api) · [Source](https://eliot-akira.github.io/zip-compressor)**
 
 ## Changes
 
@@ -13,12 +13,12 @@ This project is based on a fork of [`@php-wasm/stream-compression`](https://gith
   - [x] `@php-wasm/util`
   - [ ] Replace polyfill of ReadableStream with standalone async iterator - [API](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream#async_iteration), [browser compatibility](https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream/ReadableStream#browser_compatibility)
 
-- [ ] Refactor as its own library
+- [x] Refactor as its own library
   - [x] Format
   - [x] Build
-  - [ ] Test
+  - [x] Test
 
-## Origin
+## How it started
 
 ### Cloning a subdirectory of a monorepo into its own repository
 
