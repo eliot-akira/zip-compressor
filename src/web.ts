@@ -1,7 +1,7 @@
-import * as ZipStream from './index'
+import * as ZipCompressor from './index'
 
 declare var window: {
-  ZipStream: typeof ZipStream
+  ZipCompressor: typeof ZipCompressor
 }
 
-window.ZipStream = ZipStream
+window.ZipCompressor = ZipCompressor
